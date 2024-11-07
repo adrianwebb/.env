@@ -1,3 +1,6 @@
 # Eclipse project files
 .project
 .settings
+
+# VS Code project files
+*.code-workspace
