@@ -4,3 +4,4 @@
 
 # VS Code project files
 *.code-workspace
+.vscode
