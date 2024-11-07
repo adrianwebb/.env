@@ -1,14 +1,12 @@
-#/bin/bash
+#!/usr/bin/env bash
 
 #
-# Apply bundled environment configurations for Ubuntu 16.04
+# Apply bundled environment configurations for Ubuntu 2[2|4].04
 #
-SCRIPT_DIR="$(cd "$(dirname "$([ `readlink "$0"` ] && echo "`readlink "$0"`" || echo "$0")")"; pwd -P)"
+SCRIPT_PATH="${BASH_SOURCE[0]}" # bash
 cd "$SCRIPT_DIR"
 
 echo "Copying Apt sources and updating system packages"
-sudo cp -f apt/sources.list /etc/apt
-
 if [ ! -f apt/sources.list.d/.gitkeep ]
 then
   for filename in apt/sources.list.d/*
